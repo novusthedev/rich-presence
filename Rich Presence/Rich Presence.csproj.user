@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>C:\Users\Novus\Pictures\20220905_164259.png</Source>
+    <SmallTileSource>C:\Users\Novus\Pictures\20220905_164259.png</SmallTileSource>
+    <MediumTileSource>C:\Users\Novus\Pictures\20220905_164259.png</MediumTileSource>
+    <WideTileSource>C:\Users\Novus\Pictures\20220905_164259.png</WideTileSource>
+    <LargeTileSource>C:\Users\Novus\Pictures\20220905_164259.png</LargeTileSource>
+    <AppIconSource>C:\Users\Novus\Pictures\20220905_164259.png</AppIconSource>
+    <SplashScreenSource>C:\Users\Novus\Pictures\20220905_164259.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\Novus\Pictures\20220905_164259.png</PackageLogoSource>
+    <ActiveDebugProfile>Rich Presence (Unpackaged)</ActiveDebugProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

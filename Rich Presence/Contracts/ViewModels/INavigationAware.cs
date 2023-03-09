@@ -1,0 +1,8 @@
+﻿namespace Rich_Presence.Contracts.ViewModels;
+
+public interface INavigationAware
+{
+    void OnNavigatedTo(object parameter);
+
+    void OnNavigatedFrom();
+}
