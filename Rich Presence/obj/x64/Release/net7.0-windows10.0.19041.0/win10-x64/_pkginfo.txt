@@ -1,1 +1,0 @@
-C:\Users\Novus\source\repos\Rich Presence\Rich Presence\bin\x64\Release\net7.0-windows10.0.19041.0\win10-x64\AppPackages\Rich Presence_1.2.0.0_Test\Rich Presence_1.2.0.0_x64.msix
