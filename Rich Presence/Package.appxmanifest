@@ -13,12 +13,12 @@
   <Identity
     Name="4fac8d3a-9b35-45bd-a0b3-453127da81cb"
     Publisher="CN=Novus"
-    Version="1.2.0.0" />
+    Version="1.2.1.0" />
     
   <mp:PhoneIdentity PhoneProductId="4fac8d3a-9b35-45bd-a0b3-453127da81cb" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
     
   <Properties>
-    <DisplayName>Rich Presence</DisplayName>
+    <DisplayName>Rich Presence Preview</DisplayName>
     <PublisherDisplayName>Novus</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>

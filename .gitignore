@@ -1,3 +1,7 @@
 *.vs
 *Rich Presence\bin
 *Rich Presence\obj
+*Rich Presence.Core\bin
+*Rich Presence.Core\obj
+*Rich Presence.Tests.MSTest\bin
+*Rich Presence.Tests.MSTest\obj
