@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "R/DWWqet06g1px2g//oWKJvrb9oD2mM5hioNXha34w2TQwAwD8jhlEFHbX9AtnPMENWfpg+CazfACHUXxV3sBw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Novus\\source\\repos\\Rich Presence\\Rich Presence.Core\\Rich Presence.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Novus\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

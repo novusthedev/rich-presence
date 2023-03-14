@@ -23,6 +23,7 @@
         <Button x:Name="ToggleButton" Content="▶️ Start Presence" Margin="10,270,0,0" Height="32" VerticalAlignment="Top" RenderTransformOrigin="0,0.5" Width="137" Click="ToggleButton_Click"/>
         <Button x:Name="SaveToFile" Content="🗃️ Save" Margin="480,269,0,0" Height="33" VerticalAlignment="Top" RenderTransformOrigin="0,0.5" Width="105" Click="SaveToFile_Click" />
         <Button x:Name="OpenFromFile" Content="📂 Open" Margin="370,269,0,0" Height="33" VerticalAlignment="Top" RenderTransformOrigin="0,0.5" Width="105" Click="OpenFromFile_Click"/>
+        <Button x:Name="Current_System_Preset" Content="🖥️ Current System - Preset" Margin="0,279,205,0" Height="23" VerticalAlignment="Top" RenderTransformOrigin="1,0.5" Width="165" Click="Current_System_Preset_Click" FontSize="8" HorizontalAlignment="Right" />
         <TextBlock Margin="10,0,0,10" TextWrapping="Wrap" Text="You need to create an app on the Discord DevPortal first. This app is currently in beta!" VerticalAlignment="Bottom" RenderTransformOrigin="0,1" HorizontalAlignment="Left"/>
     </Grid>
 </Page>

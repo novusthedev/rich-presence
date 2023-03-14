@@ -15,6 +15,11 @@ using Windows.Storage.Pickers;
 using Windows.Storage.Provider;
 using Windows.Storage;
 using Microsoft.Toolkit.Uwp.Notifications;
+using System.Reflection;
+using Windows.System.Profile;
+using static Rich_Presence.Views.MainPage;
+using static Rich_Presence.Views.ShellPage;
+using System.Text;
 
 namespace Rich_Presence.Views;
 
@@ -195,6 +200,43 @@ public sealed partial class MainPage : Page
 
     }
 
+    private void Current_System_Preset_Click(object sender, RoutedEventArgs e)
+    {
+        var deviceFamilyVersion = AnalyticsInfo.VersionInfo.DeviceFamilyVersion;
+        var version = ulong.Parse(deviceFamilyVersion);
+        var major = (version & 0xFFFF000000000000L) >> 48;
+        var minor = (version & 0x0000FFFF00000000L) >> 32;
+        var build = (version & 0x00000000FFFF0000L) >> 16;
+        var revision = (version & 0x000000000000FFFFL);
+        var osVersion = $"{major}.{minor}.{build}.{revision}";
+
+        if (build >= 22000.0)
+        {
+            major = 11;
+        }
+
+        AppID.Text = "1083898123648245840";
+        RPC_Details.Text = (Environment.ProcessorCount / 2).ToString() + " cores";
+
+        RPC_State.Text = Environment.ProcessorCount.ToString() + " threads";
+        RPC_LargeKey.Text = "richpresence";
+        RPC_LargeText.Text = "Made with Rich Presence!";
+
+        if (major >= 11)
+        {
+            RPC_SmallKey.Text = "windows_11";
+            RPC_SmallText.Text = "On Windows 11";
+
+        }
+
+        else
+        {
+            RPC_SmallKey.Text = "windows-10";
+            RPC_SmallText.Text = "On Windows 10";
+        }
+
+    }
+
     private void ToggleButton_Click(object sender, RoutedEventArgs e)
     {
 
@@ -203,6 +245,17 @@ public sealed partial class MainPage : Page
         var client = new DiscordRpcClient(AppID.Text.ToString());
 
         client.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
+
+        //Subscribe to events
+        client.OnReady += (sender, e) =>
+        {
+            Console.WriteLine("Received Ready from user {0}", e.User.Username);
+        };
+
+        client.OnPresenceUpdate += (sender, e) =>
+        {
+            Console.WriteLine("Received Update! {0}", e.Presence);
+        };
 
         client.Initialize();
 
@@ -311,6 +364,10 @@ public sealed partial class MainPage : Page
     .AddText("Rich presence started!")
     .AddText("Check your Discord profile to see the new presence! You need to close the app to stop the presence. You can save your presence for next time.")
     .Show();
+
+        var timer = new System.Timers.Timer(150);
+        timer.Elapsed += (sender, args) => { client.Invoke(); };
+        timer.Start();
 
     }
 }

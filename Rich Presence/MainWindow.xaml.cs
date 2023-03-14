@@ -1,4 +1,5 @@
 ﻿using Rich_Presence.Helpers;
+using Windows.ApplicationModel;
 
 namespace Rich_Presence;
 
