@@ -1,1 +1,3 @@
 *.vs
+*Rich Presence\bin
+*Rich Presence\obj
